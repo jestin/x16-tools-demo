@@ -24,7 +24,7 @@ TILES.BIN: mytiles.xcf
 	gimp -i -d -f -b '(export-vera "mytiles.xcf" "TILES.BIN" 0 8 16 16 0 1 1)' -b '(gimp-quit 0)'
 
 PAL.BIN: TILES.BIN
-	mv TILES.BIN.PAL PAL.BIN
+	cp TILES.BIN.PAL PAL.BIN
 
 L0MAP.BIN: mymap.tmx
 	tmx2vera mymap.tmx -l terrain L0MAP.BIN
